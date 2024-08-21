@@ -1,0 +1,37 @@
+<resources>
+    <!-- MainActivity-->
+    <string name="tab_search">검색</string>
+    <string name="tab_favorite">즐겨찾기</string>
+
+    <!--SearchFragment-->
+    <string name="no_search_result">검색 결과가 없습니다.</string>
+    <string name="retry">다시시도</string>
+    <string name="network_error">네트워크 연결 상태를 확인해주세요.</string>
+
+    <string name="hint_search">검색 하는 내용 입니다.</string>
+
+    <string name="content_description_search_button">검색하기 버튼</string>
+    <string name="content_description_clear_button">검색어 입력 영역 초기화 버튼</string>
+
+    <!--FavoriteFragment-->
+    <string name="empty_favorite">즐겨찾기에 등록된 미디어가 없습니다.</string>
+
+    <string name="content_description_thumbnail">미리보기 미디어</string>
+    <string name="content_description_favorite">현재 미디어 좋아요 상태 및 변경 버튼</string>
+    <string name="content_description_media_type">미디어 종류를 표시하는 아이콘</string>
+
+    <!--MediaActivity-->
+    <string name="content_description_back_button">뒤로가기 버튼</string>
+    <string name="content_description_favorite_button">좋아요 상태표시 및 좋아요 상태 변경 버튼</string>
+    <string name="content_description_media">현재 보고있는 미디어</string>
+
+    <string name="failed_get_media">미디어 데이터를 가져오는데 문제가 생겼습니다. 다시 시도 해주세요.</string>
+
+    <!--Common-->
+    <string name="no_search_query">검색어를 입력해주세요.</string>
+    <string name="failed_get_favorite_medias">"즐겨찾기 미디어를 가져오는데 문제가 생겼습니다. 다시 시도 해주세요."</string>
+    <string name="success_save_media">미디어가 저장되었습니다.</string>
+    <string name="failed_save_media">미디어 저장에 실패했습니다.</string>
+    <string name="success_delete_media">미디어가 삭제되었습니다.</string>
+    <string name="failed_delete_media">미디어 삭제에 실패했습니다.</string>
+</resources>
