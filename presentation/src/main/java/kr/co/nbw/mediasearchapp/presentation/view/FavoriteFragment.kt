@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
 import kr.co.nbw.mediasearchapp.presentation.R
-import kr.co.nbw.mediasearchapp.domain.model.MediaSearchData
+import kr.co.nbw.mediasearchapp.domain.model.MediaSearchData.MediaEntity
 import kr.co.nbw.mediasearchapp.domain.model.ResultWrapper
 import kr.co.nbw.mediasearchapp.presentation.adapter.FavoriteMediasAdapter
 import kr.co.nbw.mediasearchapp.presentation.databinding.FragmentFavoriteBinding
@@ -110,11 +110,11 @@ class FavoriteFragment : Fragment(), OnFavoriteMediaItemClick {
         _binding = null
     }
 
-    override fun saveMedia(media: kr.co.nbw.mediasearchapp.domain.model.MediaSearchData.MediaEntity) {
-        TODO("Not yet implemented")
+    override fun saveMedia(media: MediaEntity) {
+        // 구현 안함
     }
 
-    override fun deleteMedia(media: kr.co.nbw.mediasearchapp.domain.model.MediaSearchData.MediaEntity) {
+    override fun deleteMedia(media: MediaEntity) {
         when (favoriteViewModel.deleteMedia(media)) {
             is ResultWrapper.Success -> {
                 favoriteViewModel.fetchFavoriteMedias()
@@ -135,7 +135,7 @@ class FavoriteFragment : Fragment(), OnFavoriteMediaItemClick {
         }
     }
 
-    override fun getFavoriteMedias(): List<kr.co.nbw.mediasearchapp.domain.model.MediaSearchData.MediaEntity> {
+    override fun getFavoriteMedias(): List<MediaEntity> {
         when (val result = favoriteViewModel.getFavoriteMediaList()) {
             is ResultWrapper.Success -> {
                 return result.value
