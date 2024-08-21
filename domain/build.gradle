@@ -1,16 +1,15 @@
 plugins {
-    id "com.android.application"
-    id "org.jetbrains.kotlin.android"
-    id "com.google.devtools.ksp"
-    id "dagger.hilt.android.plugin"
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
+    id("dagger.hilt.android.plugin")
+    id("com.google.devtools.ksp")
 }
 
 android {
-    namespace 'kr.co.nbw.mediasearchapp'
+    namespace 'kr.co.nbw.mediasearchapp.domain'
     compileSdk 34
 
     defaultConfig {
-        applicationId "kr.co.nbw.mediasearchapp"
         minSdk 26
         targetSdk 34
         versionCode 1
@@ -25,28 +24,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
     kotlinOptions {
         jvmTarget = '1.8'
     }
 }
 
 dependencies {
-    implementation(project(path: ':domain'))
-    implementation(project(path: ':data'))
-    implementation(project(path: ':presentation'))
-
     // Hilt
     implementation "com.google.dagger:hilt-android:2.51.1"
     ksp "com.google.dagger:hilt-compiler:2.51.1"
 
-    // Test
-    testImplementation "junit:junit:4.13.2"
-    androidTestImplementation "androidx.test.ext:junit:1.2.1"
-    androidTestImplementation "androidx.test.espresso:espresso-core:3.6.1"
+    testImplementation 'junit:junit:4.13.2'
 }
