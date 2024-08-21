@@ -1,17 +1,14 @@
 package kr.co.nbw.mediasearchapp.data.di
 
-import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import kr.co.nbw.mediasearchapp.BuildConfig
 import kr.co.nbw.mediasearchapp.data.api.HeaderInterceptor
 import kr.co.nbw.mediasearchapp.data.api.SearchApi
-import kr.co.nbw.mediasearchapp.data.source.local.SharedPreferenceHelper
 import kr.co.nbw.mediasearchapp.data.utils.Constants.BASE_URL
 import kr.co.nbw.mediasearchapp.data.utils.Constants.DATE_TIME_FOMAT
 import okhttp3.OkHttpClient
@@ -79,14 +76,5 @@ object NetworkModule {
     @Provides
     fun provideApiService(retrofit: Retrofit): SearchApi {
         return retrofit.create(SearchApi::class.java)
-    }
-
-    @Singleton
-    @Provides
-    fun provideSharedPreferenceHelper(
-        @ApplicationContext context: Context,
-        gson: Gson
-    ): SharedPreferenceHelper {
-        return SharedPreferenceHelper(context, gson)
     }
 }

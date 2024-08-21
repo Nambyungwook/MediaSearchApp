@@ -1,4 +1,4 @@
-package kr.co.nbw.mediasearchapp.data.source.local
+package kr.co.nbw.mediasearchapp.data.sharedpreferencehelper
 
 import android.content.Context
 import android.content.SharedPreferences

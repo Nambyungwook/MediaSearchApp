@@ -1,5 +1,6 @@
 package kr.co.nbw.mediasearchapp.data.source.local
 
+import kr.co.nbw.mediasearchapp.data.sharedpreferencehelper.SharedPreferenceHelper
 import kr.co.nbw.mediasearchapp.domain.model.MediaSearchData
 import kr.co.nbw.mediasearchapp.domain.model.ResultWrapper
 import javax.inject.Inject
